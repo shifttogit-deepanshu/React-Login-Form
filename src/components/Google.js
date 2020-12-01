@@ -1,9 +1,12 @@
-import firebase,{provider} from "../firebase/firebase";
-import React from "react";
+
+import googleAuth from "../actions/googleAuth";
+import store from "../redux/store"
 
 
-export const Google = ()=>(
-    <div><button>Sign In with Google</button></div>
+export const Google = ()=>{
+return (
+    <div><button onClick={store.dispatch(googleAuth)}>Sign In with Google</button></div>
 )
+}
 
 export default Google
