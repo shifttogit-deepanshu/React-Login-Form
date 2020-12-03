@@ -1,6 +1,6 @@
 const authReducer = (state={auth:""},action)=>{
     switch(action.type){
-        case "GOOGLE_AUTH":
+        case "AUTH":
             return {
                 auth:action.user.uid
             }

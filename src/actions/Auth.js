@@ -1,5 +1,7 @@
-import firebase,{provider} from "../firebase/firebase";
-export default (dispatch)=>{
+import firebase from "../firebase/firebase";
+
+export default (provider)=>{
+return (dispatch)=>{
     return ()=>{
         firebase.auth().signInWithPopup(provider).then((result)=>{
         let user = result.user
@@ -7,9 +9,10 @@ export default (dispatch)=>{
         return user
         
     }).then((user)=>{
-        dispatch({type:"GOOGLE_AUTH",user})
+        dispatch({type:"AUTH",user})
     })
     
     
+}
 }
 }
