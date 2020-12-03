@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import LoginApp from './components/LoginApp'
 import reportWebVitals from './reportWebVitals';
 import "./styles/styles.scss"
+import AppRouter from "./Router/AppRouter"
+import store from "../src/redux/store"
+import { Provider } from 'react-redux'
 
 ReactDOM.render(
-  <React.StrictMode>
-      <LoginApp />
-  </React.StrictMode>,
+  <Provider store={store}>
+      <AppRouter />
+  </Provider>,
   document.getElementById('root')
 );
 
