@@ -1,8 +1,10 @@
 import React from 'react'
 import {Formik,Form,Field,ErrorMessage} from 'formik'
 import * as Yup from 'yup'
+import formSubmit from "../actions/Submit"
+import {connect} from "react-redux"
 
-export const LoginForm = ()=>(
+export const LoginForm = (props)=>(
     <div>
     <Formik 
     initialValues={{email:"",password:""}}
@@ -10,7 +12,7 @@ export const LoginForm = ()=>(
         email:Yup.string().email('Invalid Email address').required('This field is required'),
         password:Yup.string().required('This field is required')
     })}
-    onSubmit={values=>console.log(values)}
+    onSubmit={values=>props.formSubmission(values.email,values.password)}
     >
     <Form>
     <div>
@@ -33,4 +35,12 @@ export const LoginForm = ()=>(
     </div>
 )
 
-export default LoginForm
+const mapDispatchToProps = (dispatch)=>{
+    return {
+        formSubmission : (email,password) =>{
+            dispatch(formSubmit(email,password))
+        }
+    }
+}
+
+export default connect(undefined,mapDispatchToProps)(LoginForm)
