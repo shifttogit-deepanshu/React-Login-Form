@@ -1,15 +1,16 @@
-import firebase from "../firebase/firebase";
+import firebase from "../firebase/firebase"
+import {useHistory} from "react-router-dom"
 
 export default (provider)=>{
 return (dispatch)=>{
     return ()=>{
         firebase.auth().signInWithPopup(provider).then((result)=>{
-        let user = result.user
+        let id = result.user.uid
         console.log("Sign In")
-        return user
+        return id
         
-    }).then((user)=>{
-        dispatch({type:"AUTH",user})
+    }).then((id)=>{
+        dispatch({type:"AUTH",id})
     })
     
     

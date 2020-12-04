@@ -13,7 +13,7 @@ const AppRouter = ()=>(
         <Switch>
         <Route path="/" component={LoginApp} exact={true}/>
         <Route path="/public" component={PublicRoute} />
-        <PrivateRouter path="/private" component={PrivateRoute} />
+        <PrivateRouter path="/private" component={PrivateRoute} redirect="/"/>
         </Switch>    
     </BrowserRouter>
 )

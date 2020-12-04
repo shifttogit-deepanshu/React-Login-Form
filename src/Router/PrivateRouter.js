@@ -5,10 +5,12 @@ import {Route,Redirect} from 'react-router-dom'
 export const PrivateRouter = ({
     auth,
     component:Component,
+    redirect,
     ...rest
+    
 })=>(
     <Route {...rest} component={(props)=>(
-        auth ? (<Component {...props} />):(<Redirect to="/" />)
+        auth ? (<Component {...props} />):(<Redirect to={redirect}/>)
     )}
     />
 )
