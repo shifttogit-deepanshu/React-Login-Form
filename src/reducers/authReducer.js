@@ -4,6 +4,10 @@ const authReducer = (state={auth:""},action)=>{
             return {
                 auth:action.user.uid
             }
+        case "FORM_SUBMIT":
+            return {
+                auth:action.id
+            }
         default:
             return state
     }
