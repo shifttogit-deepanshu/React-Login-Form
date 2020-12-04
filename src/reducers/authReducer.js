@@ -5,9 +5,7 @@ const authReducer = (state={auth:""},action)=>{
                 auth:action.user.uid
             }
         default:
-            return {
-                state
-            }
+            return state
     }
 
 }
