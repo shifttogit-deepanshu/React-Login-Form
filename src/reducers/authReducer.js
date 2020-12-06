@@ -4,6 +4,10 @@ const authReducer = (state={auth:""},action)=>{
             return {
                 auth:action.id
             }
+        case "LOG_OUT":
+            return {
+                auth:""
+            }
         default:
             return state
     }
