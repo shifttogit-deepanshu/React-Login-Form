@@ -1,5 +1,5 @@
 import firebase from "../firebase/firebase"
-import {useHistory} from "react-router-dom"
+
 
 export default (provider)=>{
 return (dispatch)=>{
@@ -11,6 +11,7 @@ return (dispatch)=>{
         
     }).then((id)=>{
         dispatch({type:"AUTH",id})
+
     })
     
     
