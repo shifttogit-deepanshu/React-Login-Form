@@ -58,3 +58,24 @@
     color:$text-color;
 }
 
+.error_message{
+    width:90%;
+    padding:3px 0px 3px 0px;
+    background-color: rgba(180, 109, 109,0.7);
+    color:white;
+    position: relative;
+    bottom:30px;
+    border-bottom:1px solid red;
+    animation-name: error-popup;
+    animation-duration: 0.5s;
+    text-align:center;
+}
+
+@keyframes error-popup{
+    from{
+        opacity:0
+    }
+    to{
+       opacity:100
+    }
+}

@@ -20,13 +20,9 @@ export const LoginForm = (props)=>(
     <div className="form__elements">
     
     <Field name="email" type="email" placeholder="Email *" className="input"/>
-    <div>
-    <ErrorMessage name="email"/>
-    </div>
+    <ErrorMessage name="email" className="error_message" component="div"/>
     <Field name="password" type="password" placeholder="password *" className="input"/>
-    <div>
-    <ErrorMessage name="password"/>
-    </div>
+    <ErrorMessage name="password"  className="error_message" component="div"/>
     <div>
     <button type="submit">Submit</button>
     </div>
