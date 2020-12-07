@@ -4,6 +4,43 @@
     background-color: $theme_color;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
+
+
+.form{
+
+    width:100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form__head{
+    color:$text-color;
+    font-size:35px;
+    padding-top:35px;
+    padding-bottom:35px;
+    margin-bottom:35px;
+}
+
+.form__elements{
+    height:280px;
+    width:100%;
+    border:2px solid rgb(134, 59, 134);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input{
+    height:30px;
+    margin-bottom:30px;
+    width:90%;
+    background-color: $theme-color;
+    border-bottom:2px solid $text-color;
+    color:$text-color;
+    border:none;
+    border-bottom: 3px solid $text-color; 
+}
+

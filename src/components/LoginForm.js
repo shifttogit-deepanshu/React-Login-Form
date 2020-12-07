@@ -15,21 +15,21 @@ export const LoginForm = (props)=>(
     })}
     onSubmit={values=>props.formSubmission(values.email,values.password)}
     >
-    <Form>
-    <div>
-    <Field name="email" type="email" placeholder="Email" />
-    </div>
+    <Form className="form">
+    <div className="form__head">LOG IN</div>
+    <div className="form__elements">
+    
+    <Field name="email" type="email" placeholder="Email" className="input"/>
     <div>
     <ErrorMessage name="email"/>
     </div>
-    <div>
-    <Field name="password" type="password" placeholder="password"/>
-    </div>
+    <Field name="password" type="password" placeholder="password" className="input"/>
     <div>
     <ErrorMessage name="password"/>
     </div>
     <div>
     <button type="submit">Submit</button>
+    </div>
     </div>
     </Form>
     </Formik>
