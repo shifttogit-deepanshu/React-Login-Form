@@ -1,0 +1,22 @@
+.login_app{
+    height:95vh;
+    width:100vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    // background-color: rgba(155, 89, 182, 1);
+}
+
+.app_container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    height:700px;
+    width:1000px;
+    max-width:1000px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0.5px 0.5px 12px 2px grey;
+}

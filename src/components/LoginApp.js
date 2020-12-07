@@ -7,8 +7,10 @@ import {Redirect} from "react-router-dom"
 const LoginApp = ({id})=>(
     id?(<Redirect to="/private" />):(
     <div className="login_app">
-        <LoginForm />
-        <ThirdPartyLogin />
+        <div className="app_container">
+            <ThirdPartyLogin />
+            <LoginForm />
+        </div>
     </div>
     )
 )
