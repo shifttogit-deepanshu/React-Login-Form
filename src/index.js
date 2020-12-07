@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import "./styles/styles.scss"
+import "normalize.css"
 import AppRouter from "./Router/AppRouter"
 import store from "../src/redux/store"
 import { Provider } from 'react-redux'

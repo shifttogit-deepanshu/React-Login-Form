@@ -1,6 +1,5 @@
 import firebase from "../firebase/firebase"
 
-
 export default (provider)=>{
 return (dispatch)=>{
     return ()=>{
@@ -11,10 +10,7 @@ return (dispatch)=>{
         
     }).then((id)=>{
         dispatch({type:"AUTH",id})
-
     })
-    
-    
 }
 }
 }
