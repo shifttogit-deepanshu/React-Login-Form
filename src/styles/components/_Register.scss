@@ -1,0 +1,34 @@
+.register{
+    width:90%;
+    border-top: 2px groove white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.register__head{
+    color:$text-color;
+    font-size:35px;
+    padding-top:35px;
+    padding-bottom:35px;
+
+}
+
+.register__text{
+    color:$text-color;
+
+    margin-bottom:30px;
+}
+
+.register__link{
+    color:white;
+    font-weight: 600;
+    text-decoration: none;
+    font-style:italic;
+}
+
+.submit_button--align{
+    align-self: center;
+}
+

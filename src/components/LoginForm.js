@@ -17,8 +17,7 @@ export const LoginForm = (props)=>(
     >
     <Form className="form" autoComplete="off">
     <div className="form__head">LOG IN</div>
-    <div className="form__elements">
-    
+    <div className="form__elements">    
     <Field name="email" type="email" placeholder="Email *" className="input"/>
     <ErrorMessage name="email" className="error_message" component="div"/>
     <Field name="password" type="password" placeholder="password *" className="input"/>
@@ -27,9 +26,7 @@ export const LoginForm = (props)=>(
     </div>
     </Form>
     </Formik>
-    <div>
-        <Register/>
-    </div>
+    <Register/>
     </div>
     
 
