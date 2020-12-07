@@ -23,9 +23,7 @@ export const LoginForm = (props)=>(
     <ErrorMessage name="email" className="error_message" component="div"/>
     <Field name="password" type="password" placeholder="password *" className="input"/>
     <ErrorMessage name="password"  className="error_message" component="div"/>
-    <div>
-    <button type="submit">Submit</button>
-    </div>
+    <button type="submit" className="submit_button">Log In</button>
     </div>
     </Form>
     </Formik>
