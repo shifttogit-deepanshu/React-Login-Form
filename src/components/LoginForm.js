@@ -3,6 +3,7 @@ import {Formik,Form,Field,ErrorMessage} from 'formik'
 import * as Yup from 'yup'
 import formSubmit from "../actions/Submit"
 import {connect} from "react-redux"
+import Register from "./Register"
 
 export const LoginForm = (props)=>(
     <div className="login_form">
@@ -32,7 +33,12 @@ export const LoginForm = (props)=>(
     </div>
     </Form>
     </Formik>
+    <div>
+        <Register/>
     </div>
+    </div>
+    
+
 )
 
 const mapDispatchToProps = (dispatch)=>{
