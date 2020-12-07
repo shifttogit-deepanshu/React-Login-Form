@@ -15,15 +15,15 @@ export const LoginForm = (props)=>(
     })}
     onSubmit={values=>props.formSubmission(values.email,values.password)}
     >
-    <Form className="form">
+    <Form className="form" autoComplete="off">
     <div className="form__head">LOG IN</div>
     <div className="form__elements">
     
-    <Field name="email" type="email" placeholder="Email" className="input"/>
+    <Field name="email" type="email" placeholder="Email *" className="input"/>
     <div>
     <ErrorMessage name="email"/>
     </div>
-    <Field name="password" type="password" placeholder="password" className="input"/>
+    <Field name="password" type="password" placeholder="password *" className="input"/>
     <div>
     <ErrorMessage name="password"/>
     </div>

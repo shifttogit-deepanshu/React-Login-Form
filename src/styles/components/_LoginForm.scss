@@ -27,7 +27,6 @@
 .form__elements{
     height:280px;
     width:100%;
-    border:2px solid rgb(134, 59, 134);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,9 +37,24 @@
     margin-bottom:30px;
     width:90%;
     background-color: $theme-color;
-    border-bottom:2px solid $text-color;
-    color:$text-color;
     border:none;
-    border-bottom: 3px solid $text-color; 
+    border-bottom: 3px solid $text-color;
+    color: $text-color; 
+}
+
+.input:focus{
+    outline:none;
+    caret-color: $text-color;
+    border-bottom:3.4px solid white;
+    font-size:17px;
+    transition-duration: 0.2s;
+    ::placeholder{
+        color:white;
+        font-size: 17px;
+    }
+}
+
+::placeholder{
+    color:$text-color;
 }
 
