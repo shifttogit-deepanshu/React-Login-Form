@@ -5,7 +5,7 @@ import formSubmit from "../actions/Submit"
 import {connect} from "react-redux"
 
 export const LoginForm = (props)=>(
-    <div>
+    <div className="login_form">
     <Formik 
     initialValues={{email:"",password:""}}
     validationSchema={Yup.object({

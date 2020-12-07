@@ -1,13 +1,12 @@
 import React from "react"
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 const Header = ()=>(
     <div className="header">
-    <Link to="/">Home</Link>
-    <Link to="/public">Public</Link>
-    <Link to="/private">Private</Link>
+    <NavLink to="/" className="link_text">Home</NavLink>
+    <NavLink to="/public" className="link_text">Public</NavLink>
+    <NavLink to="/private" className="link_text">Private</NavLink>
     </div>
 )
-
 
 export default Header

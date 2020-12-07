@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import "./base/settings";
 @import "../styles/base/base.scss";
 @import "./components/LoginApp";
 @import "./components/Header";
+@import "./components/LoginForm";
+@import "./components/ThirdPartyLogin";
