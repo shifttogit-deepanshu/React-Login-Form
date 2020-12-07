@@ -1,10 +1,22 @@
 .header{
-    height:5vh;
+    height:60px;
     background-color: $theme_color;
+    width:100vw;
+    margin-bottom: 100px;
 
 }
 
 .link_text{
+    font-size:20px;
     color:$text-color;
     text-decoration:none;
+}
+
+.container--link{
+    height:60px;
+}
+
+.container--link:hover{
+    background-color: lighten($theme_color,10%);
+    transition-duration: 0.3s;
 }

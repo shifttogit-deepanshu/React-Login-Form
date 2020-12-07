@@ -4,3 +4,12 @@ body{
     box-sizing: border-box;
     font-family:"Roboto";
 }
+
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:1000px;
+    max-width:1000px;
+    margin: auto;
+}
