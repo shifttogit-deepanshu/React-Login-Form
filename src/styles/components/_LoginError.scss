@@ -1,0 +1,10 @@
+.login_error{
+    padding:10px 0px 10px 0px;
+    background-color: rgba(180, 109, 109,1);
+    color:white;
+    animation-name: error-popup;
+    animation-duration: 0.5s;
+    text-align:center;
+    border:2px solid red;
+    box-sizing: border-box;
+}

@@ -1,9 +1,9 @@
 .header{
     height:60px;
+    position:fixed;
+    top:0;
     background-color: $theme_color;
     width:100vw;
-    margin-bottom: 100px;
-
 }
 
 .link_text{

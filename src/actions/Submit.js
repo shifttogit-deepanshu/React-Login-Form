@@ -8,7 +8,7 @@ export default (email,password)=>{
                     
                 }
                 else{
-                    console.log("no items")
+                    dispatch({type:"USER_NOT_FOUND"})
                 }
             })
         })
