@@ -16,7 +16,7 @@ export const LoginForm = (props)=>(
     onSubmit={values=>props.formSubmission(values.email,values.password)}
     >
     <Form className="form" autoComplete="off">
-    <div className="form__head">LOG IN</div>
+    <div className="head-text head-text--log-in">LOG IN</div>
     <div className="form__elements">    
     <Field name="email" type="email" placeholder="Email *" className="input"/>
     <ErrorMessage name="email" className="error_message" component="div"/>

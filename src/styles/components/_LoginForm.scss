@@ -18,14 +18,16 @@
     
 }
 
-.form__head{
-    color:$text-color;
+.head-text{
     font-size:35px;
     padding-top:35px;
     padding-bottom:35px;
     margin-bottom:35px;
 }
 
+.head-text--log-in{
+    color:$text-color;
+}
 .form__elements{
     height:280px;
     width:100%;
