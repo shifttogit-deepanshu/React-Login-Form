@@ -8,7 +8,7 @@ import "../icons/fontAwesome/fontAwesome"
 
 export const Google = ()=>{
 return (
-    <div><button onClick={store.dispatch(Auth(googleAuthProvider))} className="btn google"><span className="icon"><FontAwesomeIcon icon={['fab', 'google']} /></span>Sign In with Google</button></div>
+    <div><button onClick={store.dispatch(Auth(googleAuthProvider))} className="login-btn google"><span className="icon"><FontAwesomeIcon icon={['fab', 'google']} /></span>Sign In with Google</button></div>
 )
 }
 

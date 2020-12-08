@@ -7,7 +7,7 @@ import "../icons/fontAwesome/fontAwesome"
 
 export const Github = ()=>{
 return (
-    <div><button onClick={store.dispatch(Auth(githubAuthProvider))} className="btn github"><span className="icon"><FontAwesomeIcon icon={['fab', 'github']} /></span>Sign In with Github</button></div>
+    <div><button onClick={store.dispatch(Auth(githubAuthProvider))} className="login-btn github"><span className="icon"><FontAwesomeIcon icon={['fab', 'github']} /></span>Sign In with Github</button></div>
 )
 }
 
