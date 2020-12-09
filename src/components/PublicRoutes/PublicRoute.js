@@ -2,7 +2,7 @@ import React from 'react'
 
 
 const PublicRoute = ()=>(
-    <div>
+    <div className="container container--page">
        This is the Public Route... 
     </div>
 )

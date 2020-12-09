@@ -4,7 +4,7 @@ export default (email,password)=>{
         database.ref('Users/').once('value',(snapshot)=>{
             snapshot.forEach((childSnapshot)=>{
                 if(childSnapshot.val().email==email && childSnapshot.val().password==password){
-                    dispatch({type:"AUTH",id:childSnapshot.key})
+                    return dispatch({type:"AUTH",id:childSnapshot.key})
                     
                 }
                 else{
