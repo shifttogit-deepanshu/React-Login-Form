@@ -10,8 +10,9 @@ body{
     display:flex;
     align-items: center;
     justify-content: center;
-    width:1000px;
-    max-width:1000px;
+    width:100%;
+    max-width:1025px;
+    min-width:769px;
     margin: auto;
 }
 
@@ -53,5 +54,6 @@ body{
 .container--page{
     height:100vh;
 }
+
 
 //Not yet suported for mobile 

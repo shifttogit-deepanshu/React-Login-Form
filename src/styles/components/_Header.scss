@@ -3,7 +3,7 @@
     position:fixed;
     top:0;
     background-color: $theme_color;
-    width:100vw;
+    width:100%;
 }
 
 .link_text{
@@ -13,8 +13,11 @@
 }
 
 .container--link{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:66.66%;
     height:60px;
-    width:100%;
 }
 
 .container--link:hover{
