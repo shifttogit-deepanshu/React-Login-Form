@@ -1,7 +1,19 @@
 .header{
+    display: flex;
     height:60px;
     position:fixed;
     top:0;
     background-color: $theme_color;
     width:100%;
+}
+
+.header__toggler{
+    color:white;
+    font-size:30px;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left:30px;
 }
