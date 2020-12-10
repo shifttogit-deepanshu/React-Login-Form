@@ -11,6 +11,8 @@
     left:0;
     bottom:0;
     background-color:darken($theme_color,1%);
+    animation-name: toggle;
+    animation-duration: 0.3s;
     }
 }
 .link_text{
@@ -40,3 +42,11 @@
 
 }
 
+@keyframes toggle {
+    from{
+        width:0px;
+    }
+    to{
+        width:256px;
+    }
+}

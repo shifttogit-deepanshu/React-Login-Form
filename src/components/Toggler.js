@@ -2,7 +2,8 @@ import React from "react"
 import "../icons/fontAwesome/fontAwesome"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const Toggler = ()=>{
-    return (<div className="toggler"><FontAwesomeIcon icon={['fas','plus']}/></div>)
+const Toggler = (props)=>{
+    const className = props.toggleStatus ? "toggler toggler-active" : "toggler toggler-unactive"
+    return (<div className={className} ><FontAwesomeIcon icon={['fas','plus']}/></div>)
 }
 export default Toggler
