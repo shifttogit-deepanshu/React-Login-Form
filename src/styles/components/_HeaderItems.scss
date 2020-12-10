@@ -1,0 +1,41 @@
+.container--header{
+    @media (max-width:$desktop-breakpoint){
+    z-index:100;
+    flex-direction:column;
+    justify-content: flex-start;
+    width:256px;
+    max-width:256px;
+    min-width:0px;
+    position: fixed;
+    top:60px;
+    bottom:0;
+    background-color:darken($theme_color,1%);
+    }
+}
+.link_text{
+    font-size:20px;
+    color:$text-color;
+    text-decoration:none;
+}
+
+.container--link{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:66.66%;
+    height:60px;
+    @media (max-width:$desktop-breakpoint){
+        width:100%;
+    }
+}
+
+.container--link:hover{
+    background-color: lighten($theme_color,10%);
+    transition-duration: 0.3s;
+    
+    .link_text{
+        color:white;
+    }
+
+}
+

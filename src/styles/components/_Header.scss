@@ -5,28 +5,3 @@
     background-color: $theme_color;
     width:100%;
 }
-
-.link_text{
-    font-size:20px;
-    color:$text-color;
-    text-decoration:none;
-}
-
-.container--link{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    width:66.66%;
-    height:60px;
-}
-
-.container--link:hover{
-    background-color: lighten($theme_color,10%);
-    transition-duration: 0.3s;
-    
-    .link_text{
-        color:white;
-    }
-
-}
-
