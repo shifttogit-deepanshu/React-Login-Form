@@ -2,8 +2,8 @@ import React from "react"
 import {connect} from "react-redux"
 
 export const Logout = (props)=>(
-    <div>
-    <button onClick={props.logOut}>Log Out</button>
+    <div >
+    <button className="submit_button submit-button--logout" onClick={props.logOut}>Log Out</button>
     </div>
 
 )

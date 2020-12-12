@@ -63,32 +63,6 @@
 ::placeholder{
     color:$text-color;
 }
-
-.submit_button{
-    background-color: white;
-    color:$theme-color;
-    padding:6px 18px 6px 18px;
-    border:0px solid $theme-color;
-    border-radius:20px;
-    align-self: flex-start;
-    margin-left:5%;
-    margin-top:45px;
-    font-size:18px;
-    border:3px solid $theme-color;
-
-}
-
-.submit_button:focus{
-    outline :none;
-}
-
-.submit_button:hover{
-    background-color: $theme-color;
-    border:2px solid $text-color;
-    color:$text-color;
-    transition-duration: 0.3s;
-}
-
 // .register{
 //     border-top:2px solid white;
 // }

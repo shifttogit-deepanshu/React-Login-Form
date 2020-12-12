@@ -5,7 +5,7 @@ import Logout from "../Logout"
 const PrivateRoute = ()=>(
     <div className="container container--page">
        This is the Private Route... 
-       <Logout />
+       <Logout/>
     </div>
 )
 
