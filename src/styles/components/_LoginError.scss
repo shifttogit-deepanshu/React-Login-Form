@@ -1,24 +1,12 @@
-.error_message{
+.error--field{
     width:90%;
     padding:3px 0px 3px 0px;
-    background-color: rgb(180, 109, 109);
-    color:white;
     border-bottom:1px solid red;
-    animation-name: error-popup;
-    animation-duration: 0.5s;
-    text-align:center;
 }
 
-
-.login_error{
+.error--login{
     padding:10px 0px 10px 0px;
-    background-color: rgb(180, 109, 109);
-    color:white;
-    animation-name: error-popup;
-    animation-duration: 0.5s;
-    text-align:center;
     border:2px solid red;
-    box-sizing: border-box;
     width:100vw;
     margin-top: 60px;
 }

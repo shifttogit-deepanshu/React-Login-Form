@@ -19,9 +19,9 @@ export const LoginForm = (props)=>(
     <div className="head-text head-text--log-in">LOG IN</div>
     <div className="form__elements">    
     <Field name="email" type="email" placeholder="Email *" className="input"/>
-    <ErrorMessage name="email" className="error_message" component="div"/>
+    <ErrorMessage name="email" className="error error--field" component="div"/>
     <Field name="password" type="password" placeholder="password *" className="input"/>
-    <ErrorMessage name="password"  className="error_message" component="div"/>
+    <ErrorMessage name="password"  className="error error--field" component="div"/>
     <button type="submit" className="submit_button">Log In</button>
     </div>
     </Form>

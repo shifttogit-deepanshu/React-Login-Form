@@ -2,7 +2,7 @@ import React from "react"
 import {connect} from "react-redux"
 
 const LoginError = ({ifError})=>(
-    !!ifError && <div className="login_error">Login Error: {ifError}</div>
+    !!ifError && <div className="error error--login">Login Error: {ifError}</div>
 )
 
 const mapStateToProps = (state)=>{

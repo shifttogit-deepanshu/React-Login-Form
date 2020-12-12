@@ -53,6 +53,14 @@ body{
 .container--page{
     height:100vh;
 }
+.error{
+    background-color: rgb(180, 109, 109);
+    color:white;
+    animation-name: error-popup;
+    animation-duration: 0.5s;
+    text-align:center;
+    box-sizing: border-box;
+}
 
 .static{
     position:fixed;
