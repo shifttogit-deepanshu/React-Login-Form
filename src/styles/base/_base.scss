@@ -14,7 +14,11 @@ body{
     max-width:1025px;
     min-width:769px;
     margin: auto;
-
+    @media(max-width:$desktop-breakpoint){
+        width:90vw;
+        min-width:initial;
+        max-width: initial;
+    }
 }
 
 .head-text{

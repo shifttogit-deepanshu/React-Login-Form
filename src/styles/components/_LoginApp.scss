@@ -5,12 +5,20 @@
     align-items: center;
     justify-content: center;
     z-index:0;
-    // background-color: rgba(155, 89, 182, 1);
+    @media (max-width:$desktop-breakpoint){
+        height:initial;
+    }
 }
 
 .container--app{
     background-color: white;
-    height:700px;
+    height:720px;
     box-shadow: 0.5px 0.5px 12px 5px grey;
+    @media (max-width:$desktop-breakpoint){
+        height:initial;
+        flex-direction: column;
+        margin-top:200px;
+        margin-bottom:200px;
+    }
 }
 
