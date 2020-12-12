@@ -8,15 +8,12 @@ const Header = ()=>{
     const [toggleStatus,changeStatus] = useState(breakpoint)
     const wrapperClassName = toggleStatus ? "wrapper-active" : "wrapper"
     return (
-    <div>
+    <div class="static">
     <div className="header">
         {!breakpoint && <div onClick={()=>changeStatus(!toggleStatus)} className={wrapperClassName}><Toggler toggleStatus={toggleStatus} /></div>}
         {toggleStatus && <HeaderItems/>}
     </div>
-    <div>
-        <LoginError />
-    </div>
-    
+        <LoginError />    
     </div>
     )
 }
