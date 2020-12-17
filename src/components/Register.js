@@ -1,8 +1,9 @@
-import React from "react"
+import React,{useState} from "react"
 import {Formik,Form,Field,ErrorMessage} from 'formik'
 import * as Yup from 'yup'
 
-const Register = ()=>(
+const Register = ()=>{
+    return (
     <div className="register">
     <Formik 
     initialValues={{firstname:"",lastname:"",mobile:"",email:"",password:""}}
@@ -11,14 +12,14 @@ const Register = ()=>(
         lastname:Yup.string().required('Last name is required'),
         mobile:Yup.number("Invalid Mobile Number").required("Mobile number is required").positive("invalid Mobile Number").integer("Invalid Mobile Number"),
         email:Yup.string().email('Invalid Email address').required('This field is required'),
-        password:Yup.string().required('This field is required')
+        password:Yup.string().trim("password must not start or end with space").min(9,"password should be greater than 8 characters long").matches(/[A-Z]/,"should contain at least one uppercase character").matches(/\d/,"should contain a number").matches(/\$|!|@|#|%|\^|&|\*|_|-/gm,"special symbol").required('This field is required')
     })}
-    onSubmit={console.log("form submitted")}
+    onSubmit={values=>console.log(values)}
     >
     <Form className="form" autoComplete="off">
     <div className="head-text head-text--log-in">REGISTER</div>
     <div className="form__elements">    
-    <Field name="firsname" type="text" placeholder="firsname *" className="input"/>
+    <Field name="firstname" type="text" placeholder="firsname *" className="input"/>
     <ErrorMessage name="firstname" className="error error--field" component="div"/>
     <Field name="lastname" type="text" placeholder="lastname *" className="input"/>
     <ErrorMessage name="lastname"  className="error error--field" component="div"/>
@@ -35,6 +36,7 @@ const Register = ()=>(
     </Form>
     </Formik>    
     </div>
-)
+    )
+}
 
 export {Register as default}
