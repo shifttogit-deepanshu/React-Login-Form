@@ -3,7 +3,7 @@ const authReducer = (state={auth:""},action)=>{
         case "AUTH":
             return {
                 auth:action.id,
-                login_error:""
+                general_error:""
         }
         case "LOG_OUT":
             return {
@@ -13,8 +13,13 @@ const authReducer = (state={auth:""},action)=>{
         case "GENERAL_ERROR":
             return {
                 ...state,
-                login_error:action.errorMssg
+                general_error:action.errorMssg
                 
+            }
+        case "REGISTER":
+            return {
+                ...state,
+                general_error:""
             }
         default:
             return state

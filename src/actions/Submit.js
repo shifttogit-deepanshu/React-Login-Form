@@ -1,10 +1,13 @@
 import {database} from "../firebase/firebase"
+import { v4 as uuidv4 } from 'uuid';
+import {Redirect} from "react-router-dom";
+
 
 export const loginSubmit = (email,password)=>{
     return (dispatch)=>{
         database.ref('Users/').once('value',(snapshot)=>{
             snapshot.forEach((childSnapshot)=>{
-                if(childSnapshot.val().email==email && childSnapshot.val().password==password){
+                if(childSnapshot.val().email===email && childSnapshot.val().password===password){
                     return dispatch({type:"AUTH",id:childSnapshot.key})
                     
                 }
@@ -19,7 +22,21 @@ export const loginSubmit = (email,password)=>{
 export const registerSubmit = (values)=>{
     return (dispatch)=>{
         if(values.password===values.confirmPassword){
-            console.log("marched")
+            const uuid = uuidv4();
+            database.ref('Users/'+ uuid).set({
+                firstname:values.firstname,
+                lastname:values.lastname,
+                mobile:values.mobile,
+                email:values.email,
+                password:values.password,
+                
+            }).then(()=>{
+                dispatch({type:"REGISTER"})
+            }).then(()=>{
+                <Redirect to="/"/>
+            }).catch((e)=>{
+                dispatch({type:"GENERAL_ERROR",errorMssg:e})
+            })
         }
         else{
             dispatch({type:"GENERAL_ERROR",errorMssg:"passwords didn't match"})
