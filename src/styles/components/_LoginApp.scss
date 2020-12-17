@@ -12,6 +12,7 @@
 
 .container--app{
     background-color: white;
+    margin-top:200px;
     height:720px;
     box-shadow: 0.5px 0.5px 12px 5px grey;
     @media (max-width:$desktop-breakpoint){
