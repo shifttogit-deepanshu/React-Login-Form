@@ -8,9 +8,12 @@ const LoginApp = ({id})=>(
     id?(<Redirect to="/private" />):(
     <div className="login_app">
         <div className="container container--app">
+        <React.Fragment>
             <ThirdPartyLogin />
             <LoginForm />
-        </div>
+        </React.Fragment>
+            </div>
+        
     </div>
     )
 )

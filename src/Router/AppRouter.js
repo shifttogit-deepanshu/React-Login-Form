@@ -12,6 +12,7 @@ const AppRouter = ()=>(
         <Header/>
         <Switch>
         <Route path="/" component={LoginApp} exact={true}/>
+        <Route path="/register" component={LoginApp} />
         <Route path="/public" component={PublicRoute} />
         <PrivateRouter path="/private" component={PrivateRoute} redirect="/"/>
         </Switch>    
