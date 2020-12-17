@@ -10,10 +10,10 @@ const authReducer = (state={auth:""},action)=>{
                 ...state,
                 auth:"",
             }
-        case "USER_NOT_FOUND":
+        case "GENERAL_ERROR":
             return {
                 ...state,
-                login_error:"User Not Found!"
+                login_error:action.errorMssg
                 
             }
         default:

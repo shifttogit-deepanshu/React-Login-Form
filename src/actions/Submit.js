@@ -1,5 +1,6 @@
 import {database} from "../firebase/firebase"
-export default (email,password)=>{
+
+export const loginSubmit = (email,password)=>{
     return (dispatch)=>{
         database.ref('Users/').once('value',(snapshot)=>{
             snapshot.forEach((childSnapshot)=>{
@@ -8,9 +9,20 @@ export default (email,password)=>{
                     
                 }
                 else{
-                    dispatch({type:"USER_NOT_FOUND"})
+                    dispatch({type:"GENERAL_ERROR",errorMssg:"User Not Found"})
                 }
             })
         })
+    }
+}
+
+export const registerSubmit = (values)=>{
+    return (dispatch)=>{
+        if(values.password===values.confirmPassword){
+            console.log("marched")
+        }
+        else{
+            dispatch({type:"GENERAL_ERROR",errorMssg:"passwords didn't match"})
+        }
     }
 }

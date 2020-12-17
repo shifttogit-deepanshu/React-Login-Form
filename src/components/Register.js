@@ -1,8 +1,11 @@
-import React,{useState} from "react"
+import React from "react"
 import {Formik,Form,Field,ErrorMessage} from 'formik'
+import {connect} from "react-redux"
+import {registerSubmit} from "../actions/Submit"
 import * as Yup from 'yup'
 
-const Register = ()=>{
+const Register = (props)=>{
+
     return (
     <div className="register">
     <Formik 
@@ -14,7 +17,7 @@ const Register = ()=>{
         email:Yup.string().email('Invalid Email address').required('This field is required'),
         password:Yup.string().trim("password must not start or end with space").min(9,"password should be greater than 8 characters long").matches(/[A-Z]/,"should contain at least one uppercase character").matches(/\d/,"should contain a number").matches(/\$|!|@|#|%|\^|&|\*|_|-/gm,"special symbol").required('This field is required')
     })}
-    onSubmit={values=>console.log(values)}
+    onSubmit={values=>props.registerSubmit(values)}
     >
     <Form className="form" autoComplete="off">
     <div className="head-text head-text--log-in">REGISTER</div>
@@ -39,4 +42,12 @@ const Register = ()=>{
     )
 }
 
-export {Register as default}
+const mapDispatchToProps = (dispatch)=>{
+    return {
+        registerSubmit: (values)=>{
+            dispatch(registerSubmit(values))
+        }
+    }
+}
+
+export default connect(undefined,mapDispatchToProps)(Register)
