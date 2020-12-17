@@ -1,12 +1,11 @@
-import React from "react"
-import {NavLink} from "react-router-dom"
+import React from "react";
+// import {useHistory} from "react-router-dom";
 import {Formik,Form,Field,ErrorMessage} from 'formik'
 import {connect} from "react-redux"
 import {registerSubmit} from "../actions/Submit"
 import * as Yup from 'yup'
 
 const Register = (props)=>{
-
     return (
     <div className="register">
     <Formik 
@@ -24,15 +23,13 @@ const Register = (props)=>{
     <Form className="form" autoComplete="off">
     <div className="head-text head-text--log-in">REGISTER</div>
     <div className="form__elements form__elements--flexed"> 
-    <div className="register__field">  
+    <div className="register__field register__field--border">  
     <Field name="firstname" type="text" placeholder="firsname *" className="input"/>
     <ErrorMessage name="firstname" className="error error--field" component="div"/>
     <Field name="lastname" type="text" placeholder="lastname *" className="input"/>
     <ErrorMessage name="lastname"  className="error error--field" component="div"/>
     <Field name="mobile" type="number" placeholder="Mobile No *" className="input"/>
     <ErrorMessage name="mobile" className="error error--field" component="div"/>
-    <div>
-    </div>
     </div> 
     <div className="register__field">
     <Field name="email" type="email" placeholder="Email *" className="input"/>
@@ -44,7 +41,7 @@ const Register = (props)=>{
     
     </div>
     </div>
-    <div><button type="submit" className="submit_button">Register</button></div>
+    <div><button type="submit" className="submit_button sumit_button--register">Register</button></div>
     </Form>
     </Formik>    
     </div>

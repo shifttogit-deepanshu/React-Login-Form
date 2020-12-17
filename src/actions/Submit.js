@@ -1,7 +1,5 @@
 import {database} from "../firebase/firebase"
 import { v4 as uuidv4 } from 'uuid';
-import {Redirect} from "react-router-dom";
-
 
 export const loginSubmit = (email,password)=>{
     return (dispatch)=>{
@@ -29,11 +27,8 @@ export const registerSubmit = (values)=>{
                 mobile:values.mobile,
                 email:values.email,
                 password:values.password,
-                
             }).then(()=>{
                 dispatch({type:"REGISTER"})
-            }).then(()=>{
-                <Redirect to="/"/>
             }).catch((e)=>{
                 dispatch({type:"GENERAL_ERROR",errorMssg:e})
             })
