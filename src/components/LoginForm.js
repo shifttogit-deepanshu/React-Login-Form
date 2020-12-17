@@ -3,7 +3,7 @@ import {Formik,Form,Field,ErrorMessage} from 'formik'
 import * as Yup from 'yup'
 import formSubmit from "../actions/Submit"
 import {connect} from "react-redux"
-import Register from "./Register"
+import RegisterLink from "./RegisterLink"
 
 export const LoginForm = (props)=>(
     <div className="login_form">
@@ -26,7 +26,7 @@ export const LoginForm = (props)=>(
     </div>
     </Form>
     </Formik>
-    <Register/>
+    <RegisterLink/>
     </div>
     
 
