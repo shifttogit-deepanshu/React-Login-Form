@@ -3,17 +3,19 @@ import LoginForm from './LoginForm'
 import ThirdPartyLogin from './ThirdPartyLogin'
 import {connect} from "react-redux"
 import {Redirect} from "react-router-dom"
+import Register from "./Register"
 
-const LoginApp = ({id})=>(
+const LoginApp = ({id,location})=>(
     id?(<Redirect to="/private" />):(
     <div className="login_app">
         <div className="container container--app">
+        {location.pathname=="/"?(
         <React.Fragment>
             <ThirdPartyLogin />
             <LoginForm />
-        </React.Fragment>
-            </div>
-        
+        </React.Fragment>):
+        <Register/>}
+        </div>
     </div>
     )
 )
