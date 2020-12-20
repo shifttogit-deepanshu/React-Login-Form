@@ -11,7 +11,7 @@ const Register = (props)=>{
 
     return (
     <div className="register">
-    <div><FontAwesomeIcon icon={['fas','arrow-left']}/></div>
+    <div className="back-button"><FontAwesomeIcon icon={['fas','arrow-left']}/></div>
     <Formik 
     initialValues={{firstname:"",lastname:"",mobile:"",email:"",password:""}}
     validationSchema={Yup.object({
