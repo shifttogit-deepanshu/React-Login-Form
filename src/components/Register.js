@@ -4,10 +4,14 @@ import {Formik,Form,Field,ErrorMessage} from 'formik'
 import {connect} from "react-redux"
 import {registerSubmit} from "../actions/Submit"
 import * as Yup from 'yup'
+import "../icons/fontAwesome/fontAwesome"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Register = (props)=>{
+
     return (
     <div className="register">
+    <div><FontAwesomeIcon icon={['fas','arrow-left']}/></div>
     <Formik 
     initialValues={{firstname:"",lastname:"",mobile:"",email:"",password:""}}
     validationSchema={Yup.object({
