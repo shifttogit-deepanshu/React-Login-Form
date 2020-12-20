@@ -8,6 +8,8 @@
         width:100%;
         padding-bottom:70px;
     }
+    animation-name: popacity;
+    animation-duration:0.3s;
 }
 
 .head-text--welcome{
@@ -22,4 +24,13 @@
     line-height:1.5;
 }
 
+
+@keyframes popacity {
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
 

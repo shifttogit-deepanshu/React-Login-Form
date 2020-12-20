@@ -2,6 +2,8 @@
     background-color: $theme_color;
     width: 100%;
     height:100%;
+    animation-name: popacity;
+    animation-duration:0.5s;
 }
 
 .register__field{
@@ -28,5 +30,14 @@
     margin:10px;
     @media(max-width:$desktop-breakpoint){
         margin:100px;
+    }
+}
+
+@keyframes popacity {
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
     }
 }
