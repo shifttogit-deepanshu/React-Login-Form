@@ -1,5 +1,5 @@
 import React from "react";
-// import {useHistory} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import {Formik,Form,Field,ErrorMessage} from 'formik'
 import {connect} from "react-redux"
 import {registerSubmit} from "../actions/Submit"
@@ -11,7 +11,7 @@ const Register = (props)=>{
 
     return (
     <div className="register">
-    <div className="back-button"><FontAwesomeIcon icon={['fas','arrow-left']}/></div>
+    <div className="back-button"><NavLink to="/" className="back-button__navlink"><FontAwesomeIcon icon={['fas','arrow-left']}/></NavLink></div>
     <Formik 
     initialValues={{firstname:"",lastname:"",mobile:"",email:"",password:""}}
     validationSchema={Yup.object({

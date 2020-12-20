@@ -32,6 +32,16 @@
     }
 }
 
+.back-button{
+    margin-left:20px;
+    margin-top:20px;
+}
+
+.back-button__navlink{
+    font-size:35px;
+    color:$text-color;
+}
+
 @keyframes popacity {
     from{
         opacity:0;
